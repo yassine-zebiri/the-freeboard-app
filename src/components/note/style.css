@@ -1,0 +1,13 @@
+.note-component{
+    position: absolute!important;
+    width: 300px;
+    text-align: center;
+    min-height: 300px;
+    will-change: transform!important;
+  } 
+.note-colors-input{
+    display: none!important;
+}
+.note-colors:hover  .note-colors-input{
+    display: block!important;
+}

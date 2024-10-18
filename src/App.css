@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+    width: 6px; /* عرض شريط التمرير */
+    height: 6px; /* ارتفاع شريط التمرير (للتمرير الأفقي) */
+}
+
+/* تخصيص الممر (track) */
+::-webkit-scrollbar-track {
+    background: #fafafad6; /* لون خلفية الممر */
+    border-radius: 1px; /* الزوايا المنحنية للممر */
+}
+
+/* تخصيص المقبض (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* لون المقبض */
+    border-radius: 1px; /* الزوايا المنحنية للمقبض */
+}
+
+/* تخصيص المقبض عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* لون المقبض عند المرور عليه */
+}
+
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+
+

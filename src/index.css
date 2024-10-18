@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.base-component{
+  position: absolute;
+  will-change: 'transform';
+}
+.base-component .header-component{
+  @apply p-3 flex justify-between items-center border-b border-b-white;
+
+}
+.base-component .header-component button{
+  cursor: pointer;
+  padding:0.125rem 0.75rem;
+  border-radius: 50%;
+}
+.base-component .header-component button:hover{
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0.75;
+}
+
+
+*{
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+body{
+  direction: rtl;
+  background-color:#171717 ;
+
+}
+header{
+  background-color: #242424;
+
+}
+#Container{
+  width: 100vw;
+  height: 100vh;
+  min-width: 720px;
+  overflow: hidden;
+  position: relative;
+
+}
+#WhiteBorad{
+
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+  border: 1px solid rgba(255, 255, 255, 0.026);
+  border-radius: 1rem;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  background-image: url('./assets/icons8-center-of-gravity-100.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@layer components{
+
+  .btn{
+    @apply border px-3 py-1 border-transparent hover:border-white hover:bg-gray-100 
+    hover:text-black font-bold;
+    border-radius: 0.125rem;
+  }
+}
+/* 
+.box{
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  min-height: 300px;
+  will-change: transform;
+
+}  */

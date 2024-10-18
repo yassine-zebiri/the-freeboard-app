@@ -1,0 +1,29 @@
+.links-component{
+    
+}
+.links-component input{
+    @apply px-1 py-1 bg-transparent text-white outline-none 
+    border rounded text-sm w-full ring-1 ring-white;
+}
+.links-component .btn-links{
+    @apply border px-3 py-1 rounded w-full gap-2 font-semibold ;
+}
+.links-component .div-1{
+    @apply flex items-center justify-around w-full px-7;
+}
+.links-component .div-1 label{
+    @apply font-bold text-lg w-9;
+}
+.links-component .btn-links-component{
+    @apply font-semibold px-1.5 py-0.5 focus:ring-1 focus:ring-gray-100 focus:outline-none 
+    rounded text-sm;
+}
+.links-component .item-links-component{
+    @apply p-1 gap-5 flex justify-between items-center ;
+}
+.links-component .item-links-component a:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.links-component .items-links-component > div{
+    border-bottom:1px solid white;
+}

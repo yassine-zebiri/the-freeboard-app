@@ -1,0 +1,24 @@
+
+/* .component-counter{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    will-change: 'transform';
+}
+.component-counter .counter-header{
+    @apply p-3 flex justify-between items-center border-b border-b-white;
+} */
+ .counter-body{
+    @apply cursor-default flex flex-col  py-3 items-center gap-2;
+}
+.counter-body .counter-component-btn{
+    @apply px-1 text-2xl font-bold border rounded-full opacity-40 hover:opacity-100 
+    cursor-pointer;
+}
+.counter-body .counter-component-number{
+    @apply text-5xl font-bold font-mono;
+}
+
+.counter-body .counter-component-btn:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}

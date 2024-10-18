@@ -1,0 +1,18 @@
+.todoList-component{
+    @apply p-0  flex flex-col justify-between;
+}
+
+.todoList-component textarea{
+    @apply bg-transparent text-sm font-semibold outline-none  rounded-sm border  p-1 ;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+.todoList-component textarea:focus{
+    border-color: white;
+}
+.btn-todoList{
+    @apply font-semibold px-1.5 py-0.5 focus:ring-1 focus:ring-gray-100 focus:outline-none rounded opacity-75 hover:opacity-100 text-sm;
+}
+.btn-todoList:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
