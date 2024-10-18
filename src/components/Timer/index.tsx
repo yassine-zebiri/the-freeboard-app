@@ -48,7 +48,7 @@ const TimerComponent=({component,handle}:ComponentWithHandle<BaseComponent>)=>{
     }
 
     useEffect(()=>{
-        let interval:NodeJS.Timeout|null=null;
+        let interval: ReturnType<typeof setTimeout> | null = null;
         
         if (isActive && (seconds > 0 || minutes > 0 || hours > 0)) {
             interval = setInterval(() => {
