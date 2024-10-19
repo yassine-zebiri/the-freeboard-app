@@ -25,10 +25,20 @@
 ## Demo
 You can check out the live version of Freeboard [here](https://the-freeboard-app.vercel.app/).
 
+## Usage
+  - Move the whiteboard freely by dragging.
+<div align="center">
+  <img  src="https://s4.ezgif.com/tmp/ezgif-4-711aa30372.gif" width="800px">
+</div>
+
+  - Click on the "Add Component" button to choose the type of component to add:
+
+
+
 
 ---
 <p align="center">
-  <img src="https://i.pinimg.com/originals/f8/70/42/f870426616119650f9134fabea4f9f22.gif" alt="Support NYX GIF" width="500px">
+  <img src="https://i.pinimg.com/originals/f8/70/42/f870426616119650f9134fabea4f9f22.gif" alt="Support NYX GIF" width="100%">
 </p>
 
 
