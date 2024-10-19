@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import HeaderComponent from './components/header';
 import TheWhiteBorad from './components/the-white-borad';
-import { useAppDispatch, useAppSelector } from './store/hooks';
+import { useAppDispatch} from './store/hooks';
 import { getComponents } from './store/slices/ComponentsSlice';
 import { getBoard } from './store/slices/BoardSlice';
 
 
 function App() {
-  const state=useAppSelector(state=>state)
+//  const state=useAppSelector(state=>state)
   const dispatch=useAppDispatch();
   const i=localStorage.getItem('components');
   const a=localStorage.getItem('Board');
@@ -20,20 +20,26 @@ function App() {
     if(i ){
       
       dispatch(getComponents(JSON.parse(i)));
-      console.log(state);    setisL(true)
+      setisL(true)
 
       
     }
-    if(a) dispatch(getBoard(JSON.parse(a)));
+    if(a){
+      dispatch(getBoard(JSON.parse(a)));
+
+
+    } 
+    setisL(true)
 
     return()=>{
-      if(i ){
-        
+      if(i ){     
         dispatch(getComponents(JSON.parse(i)));
-        setisL(true)
-
       }
-      if(a) dispatch(getBoard(JSON.parse(a)));
+      if(a){
+        dispatch(getBoard(JSON.parse(a)));
+
+      } 
+      setisL(true)
 
     }
     
