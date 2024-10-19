@@ -38,7 +38,7 @@ You can check out the live version of Freeboard [here](https://the-freeboard-app
 
 ---
 <p align="center">
-  <img src="https://i.pinimg.com/originals/f8/70/42/f870426616119650f9134fabea4f9f22.gif" alt="Support NYX GIF" width="800px">
+  <img src="https://i.pinimg.com/originals/f8/70/42/f870426616119650f9134fabea4f9f22.gif" alt="Support NYX GIF" width="600px">
 </p>
 
 
