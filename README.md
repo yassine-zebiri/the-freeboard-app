@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+﻿<h1 align="center">The Freeboard app</h1>
+<p align="center">
+  <strong>
+    Freeboard is an interactive and customizable whiteboard application that allows users to freely move the board and add different components such as notes,
+    images, and to-do lists. The goal of Freeboard is to provide a flexible space for organizing ideas, managing tasks, or brainstorming.
+  </strong>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
+ - <strong> Movable Whiteboard:</strong> Users can move the whiteboard to create a custom layout that fits their needs.
+ - <strong> Flexible and User-friendly Interface:</strong> Designed to work smoothly on both desktop and mobile devices.
+ - <strong> Add Custom Components:</strong>
+   -  Notes: Jot down important ideas or reminders.
+   -  Counters: Keep track of numerical data with customizable counters.
+   -  Timers: Add a countdown or stopwatch for time-sensitive tasks.
+   -  Images: Upload and organize images.
+   -  Link Shortcuts: Easily access favorite or frequently visited websites.
+   -  To-do Lists: Manage tasks and tick them off as you complete them.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Demo
+You can check out the live version of Freeboard [here](https://the-freeboard-app.vercel.app/).
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
+<p align="center">
+  <img src="https://i.pinimg.com/originals/f8/70/42/f870426616119650f9134fabea4f9f22.gif" alt="Support NYX GIF" width="500px">
+</p>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
