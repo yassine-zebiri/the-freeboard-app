@@ -11,8 +11,19 @@
 ---
 
 ## Features
-- s
+ - <strong> Movable Whiteboard:</strong> Users can move the whiteboard to create a custom layout that fits their needs.
+ - <strong> Flexible and User-friendly Interface:</strong> Designed to work smoothly on both desktop and mobile devices.
+ - <strong> Add Custom Components:</strong>
+   -  Notes: Jot down important ideas or reminders.
+   -  Counters: Keep track of numerical data with customizable counters.
+   -  Timers: Add a countdown or stopwatch for time-sensitive tasks.
+   -  Images: Upload and organize images.
+   -  Link Shortcuts: Easily access favorite or frequently visited websites.
+   -  To-do Lists: Manage tasks and tick them off as you complete them.
 
+
+## Demo
+You can check out the live version of Freeboard [here](https://the-freeboard-app.vercel.app/).
 
 
 ---
