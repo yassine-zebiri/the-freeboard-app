@@ -6,7 +6,11 @@
   </strong>
 </p>
 
+---
 
+<div align="center">
+  <img  src="https://raw.githubusercontent.com/yassine-zebiri/my-project/refs/heads/master/Capture%20d%E2%80%99%C3%A9cran%202024-10-19%20213007.png?token=GHSAT0AAAAAACYSKKE54IAFOKUTNRPIFSBMZYUEV7A" width="800px">
+</div>
 
 ---
 
@@ -32,7 +36,18 @@ You can check out the live version of Freeboard [here](https://the-freeboard-app
 </div>
 
   - Click on the "Add Component" button to choose the type of component to add:
+     - Note
+     - Label
+     - Timer
+     - Counter
+     - Link shortcut
+     - To-do list
+     - Image
+<div align="center">
+  <img  src="https://s4.ezgif.com/tmp/ezgif-4-60b5a48258.gif" width="800px">
+</div>
 
+  - Organize the components as needed, adjust their positions, and customize their contents.
 
 
 
