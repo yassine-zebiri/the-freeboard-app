@@ -16,7 +16,7 @@
 
 ## Features
  - <strong> Movable Whiteboard:</strong> Users can move the whiteboard to create a custom layout that fits their needs.
- - <strong> Flexible and User-friendly Interface:</strong> Designed to work smoothly on both desktop and mobile devices.
+ - <strong> Flexible and User-friendly Interface:</strong> Designed to work smoothly on both desktop.
  - <strong> Add Custom Components:</strong>
    -  Notes: Jot down important ideas or reminders.
    -  Counters: Keep track of numerical data with customizable counters.
@@ -49,6 +49,8 @@ You can check out the live version of Freeboard [here](https://the-freeboard-app
 
   - Organize the components as needed, adjust their positions, and customize their contents.
 
+## Support
+For support, email yassinezebiriu@gmail.com .
 
 
 ---
