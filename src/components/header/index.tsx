@@ -26,7 +26,7 @@ function HeaderComponent(){
                     <HeaderButtonFullScreenComponent/>
                 </div>
                 <div className="w-full px-1.5 relative flex flex-col gap-3">
-                    <a href="www" target="_blank" className=" w-full text-2xl text-center">
+                    <a href="https://github.com/yassine-zebiri/the-freeboard-app" target="_blank" className=" w-full text-2xl text-center">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                     <button             
