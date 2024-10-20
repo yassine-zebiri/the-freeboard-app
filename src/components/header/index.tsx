@@ -13,6 +13,9 @@ function HeaderComponent(){
         className=" 
         fixed top-0 right-0  z-10 h-full py-3 px-0  hover:cursor-auto">
             <div className=" flex flex-col justify-between items-center h-full">
+                <div>
+                    <img className=" rounded" src="/icon.png" alt="logo" width={45} />
+                </div>
                 <div className="py-10">
                     <div className=' text-4xl cursor-pointer '>
                     <FontAwesomeIcon icon={faCircleUser} className=" rounded-full ring-2 ring-white" />
