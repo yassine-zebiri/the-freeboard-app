@@ -4,7 +4,7 @@ import HeaderAddComponent from "./HeaderAddComponet";
 import HeaderSearchLabelComponent from "./HeaderSearchLabelComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
+import logo from '../../assets/icon.png';
 function HeaderComponent(){
 
     return(
@@ -14,7 +14,7 @@ function HeaderComponent(){
         fixed top-0 right-0  z-10 h-full py-3 px-0  hover:cursor-auto">
             <div className=" flex flex-col justify-between items-center h-full">
                 <div>
-                    <img className=" rounded" src="/icon.png" alt="logo" width={45} />
+                    <img className="rounded" src={logo} alt="logo" width={45} />
                 </div>
                 <div className="py-10">
                     <div className=' text-4xl cursor-pointer '>

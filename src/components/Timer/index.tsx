@@ -78,7 +78,7 @@ const TimerComponent=({component,handle}:ComponentWithHandle<BaseComponent>)=>{
             console.log('finshed');
             setIsActive(false);
             if(AudioRef.current){
-              //  AudioRef.current.play();
+                AudioRef.current.play();
             }
             
         }
