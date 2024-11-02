@@ -44,20 +44,22 @@ const manifestForPlugIn :any= {
         purpose:'maskable'
       },
       {
-        src:'/icon-512x512-maskable.png',
+        src:'/icon_512.png',
         sizes:'512x512',
         type:'image/png',
         purpose:'maskable'
       },
       {
-          src: "/icon-192x192.png", // رمز عادي
+          src: "/icon_192..png", // رمز عادي
           sizes: "192x192",
-          type: "image/png"
+          type: "image/png",
+          purpose: "any"
       },
       {
           src: "/icon-512x512.png", // رمز عادي
           sizes: "512x512",
-          type: "image/png"
+          type: "image/png",
+          purpose: "any"
       },
       {
         src: '/apple-touch-icon.png',
@@ -69,7 +71,7 @@ const manifestForPlugIn :any= {
         src: '/maskable_icon.png',
         sizes:'512x512',
         type:'image/png',
-        purpose:'any maskable',
+        purpose:'maskable',
       },
       {
         src: '/icon.png',
