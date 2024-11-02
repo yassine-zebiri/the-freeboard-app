@@ -38,16 +38,26 @@ const manifestForPlugIn :any= {
     ],
     icons:[
       {
-        src: '/android-chrome-192x192.png',
+        src: '/icon-192x192-maskable.png',
         sizes:'192x192',
         type:'image/png',
-        purpose:'favicon'
+        purpose:'maskable'
       },
       {
-        src:'/android-chrome-512x512.png',
+        src:'/icon-512x512-maskable.png',
         sizes:'512x512',
         type:'image/png',
-        purpose:'favicon'
+        purpose:'maskable'
+      },
+      {
+          src: "/icon-192x192.png", // رمز عادي
+          sizes: "192x192",
+          type: "image/png"
+      },
+      {
+          src: "/icon-512x512.png", // رمز عادي
+          sizes: "512x512",
+          type: "image/png"
       },
       {
         src: '/apple-touch-icon.png',
