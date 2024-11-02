@@ -14,7 +14,24 @@ function App() {
   const i=localStorage.getItem('components');
   const a=localStorage.getItem('Board');
   const[isLoading,setisL]=useState(false);
-  
+  useEffect(() => {
+    const registerPeriodicSync = async () => {
+        if ('serviceWorker' in navigator && 'PeriodicSyncManager' in window) {
+            const registration:any = await navigator.serviceWorker.ready;
+            try {
+                await registration.periodicSync.register({
+                    tag: 'my-local-sync',
+                    minInterval: 24 * 60 * 60 * 1000, // 24 ساعة
+                });
+                console.log('Periodic Sync registered');
+            } catch (error) {
+                console.error('Periodic Sync registration failed:', error);
+            }
+        }
+    };
+
+    registerPeriodicSync();
+}, []);
   useEffect(()=>{
 
     if(i ){
