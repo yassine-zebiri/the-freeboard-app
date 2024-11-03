@@ -88,7 +88,8 @@ const manifestForPlugIn :any= {
   start_url:"/",
   orientation:'portrait',
   launch_handler: {
-    route_to: 'existing-client-instance'
+    route_to: 'existing-client-instance',
+    client_mode: "auto"
   },
   devOptions: {
     enabled: true
@@ -107,7 +108,7 @@ const manifestForPlugIn :any= {
     {
         origin: "https://the-freeboard-app.vercel.app"
     }
-  ],
+  ]
   }
 }
 
