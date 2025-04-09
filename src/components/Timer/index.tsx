@@ -25,6 +25,11 @@ const TimerComponent=({component,handle}:ComponentWithHandle<BaseComponent>)=>{
     }=useComponentSettings(component.id);
 
 
+    const setRest=()=>{
+        setSeconds(0);
+        setHours(0);
+        setMinutes(0);
+    }
     const ChangeTime=(unit:'seconds'|'minutes'|'hours',type:'incr'|'dicr')=>{
         if(unit==='seconds'){
             if(type==='incr' && seconds<59){
@@ -73,7 +78,7 @@ const TimerComponent=({component,handle}:ComponentWithHandle<BaseComponent>)=>{
             clearInterval(interval!);
         }
 
-        if(seconds===0 && minutes===0 && hours===0){
+        if(seconds===0 && minutes===0 && hours===0 && isActive){
             clearInterval(interval!);
             console.log('finshed');
             setIsActive(false);
@@ -165,21 +170,28 @@ const TimerComponent=({component,handle}:ComponentWithHandle<BaseComponent>)=>{
                     </div>
                 </div>
                 <div className="gap-3 w-full flex justify-center">
-                    {(seconds>0 || minutes>0) ? 
+                    {(seconds>0 || minutes>0 || hours>0) ? 
                         (
                             <>
                                 {isActive ? 
-                                (<button className="btn-timer" onClick={()=>setIsActive(!isActive)}>
-                                    <FontAwesomeIcon icon={faPause} />
-                                </button>)
+                                (
+                                    <button className="btn-timer" onClick={()=>setIsActive(!isActive)}>
+                                        <FontAwesomeIcon icon={faPause} />
+                                    </button>
+                                )
                                 :
-                                (<button className="btn-timer" onClick={()=>setIsActive(!isActive)}>
-                                    <FontAwesomeIcon icon={faPlay} />
-                                </button>)
+                                (
+                                    <>
+                                        <button className="btn-timer" onClick={()=>setIsActive(!isActive)}>
+                                            <FontAwesomeIcon icon={faPlay} />
+                                        </button>
+                                        <button className="btn-timer" onClick={()=>setRest()}>
+                                            <FontAwesomeIcon icon={faRotateRight} />
+                                        </button>
+                                    </>
+                                )
                                 }
-                                <button className="btn-timer">
-                                    <FontAwesomeIcon icon={faRotateRight} />
-                                </button>
+                                
                             </>
                         )
                     :

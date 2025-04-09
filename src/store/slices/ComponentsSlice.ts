@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { link } from "../../components/interface/baseComponent";
+import { fetchComponents } from "./components/componentsThunk";
 
 interface MyState{
     value:number|string;
     Components:Component[];
-    TheWhiteBoard:any
+    TheWhiteBoard:any,
+    loaded:boolean
 }
-interface Component{
+export interface Component{
     id: number;
     left: number;
     top: number;
@@ -25,7 +27,8 @@ const initialState:MyState={
     TheWhiteBoard:{
         x:0,
         y:0,
-    }
+    },  loaded: false,
+
 };
 
 export const ComponentsSlice=createSlice({
@@ -124,7 +127,7 @@ export const ComponentsSlice=createSlice({
         },
         setComponent:(state,action)=>{
             state.Components.filter((e)=>e.id==action.payload.id)[0].left=action.payload.x;
-            state.Components.filter((e)=>e.id==action.payload.id)[0].top=action.payload.y;            
+            state.Components.filter((e)=>e.id==action.payload.id)[0].top=action.payload.y;
             localStorage.setItem('components',JSON.stringify(state.Components));
 
         },
@@ -264,7 +267,14 @@ export const ComponentsSlice=createSlice({
                 localStorage.setItem('components',JSON.stringify(state.Components));
             }
         }
-    }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchComponents.fulfilled, (state, action) => {
+          state.Components = action.payload;
+          state.loaded = true; 
+        });
+
+      },
 });
 
 

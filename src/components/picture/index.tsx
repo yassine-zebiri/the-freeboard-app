@@ -26,7 +26,6 @@ function PictureComponent({component,handle}:ComponentWithHandle<Picture>){
     const [db, setDB] = useState<IDBDatabase | null>(null);
   
     useEffect(() => {
-      // فتح أو إنشاء قاعدة بيانات IndexedDB
       const openRequest = indexedDB.open("ImageDB", 1);
   
       openRequest.onupgradeneeded = () => {
@@ -84,8 +83,8 @@ function PictureComponent({component,handle}:ComponentWithHandle<Picture>){
 
             transaction.oncomplete = () => {
                 console.log("Image deleted successfully!");
-                setPicture(null); // إزالة الصورة من الواجهة
-                dispatch(ChangePictureComponent({ id: component.id, path: null })); // تحديث الحالة لإزالة المعرف
+                setPicture(null); 
+                dispatch(ChangePictureComponent({ id: component.id, path: null }));
             };
 
             transaction.onerror = () => {
@@ -116,16 +115,12 @@ function PictureComponent({component,handle}:ComponentWithHandle<Picture>){
         reader.onload = function (e) {
           const result = e.target?.result as string;
   
-          // استخدام الوقت الحالي كمعرف فريد للصورة
           const imageId = new Date().getTime().toString();
   
-          // تخزين الصورة في IndexedDB
           storeImage(imageId, result);
   
-          // إرسال المعرف فقط عبر الـdispatch
           dispatch(ChangePictureComponent({ id: component.id, path: imageId }));
   
-          // عرض الصورة على الشاشة
           setPicture(result);
         };
         reader.readAsDataURL(file);

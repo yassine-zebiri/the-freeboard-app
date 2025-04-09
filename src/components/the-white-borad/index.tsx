@@ -12,6 +12,8 @@ import { faArrowsToDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TodoListComponent from '../TodoList';
 import LinksComponent from '../Links';
+import { fetchComponents } from '../../store/slices/components/componentsThunk';
+import { RootState } from '../../store/store';
 
 interface Board{
     left:number;
@@ -20,13 +22,18 @@ interface Board{
 }
 
 function TheWhiteBorad(){
-    const Components:BaseComponent[]=useAppSelector((state)=>state.Components.Components);
+    const Components:BaseComponent[]=useAppSelector((state:RootState)=>state.Components.Components);
     /**
      * const TheWhiteBoard=useAppSelector((state)=>state.Components.TheWhiteBoard);
      */
     const Board:Board=useAppSelector((state)=>state.Board)
     
     const dispatch=useAppDispatch();
+
+
+    useEffect(() => {
+        dispatch(fetchComponents() as any);
+      }, [dispatch]);
     //console.log(TheWhiteBoard);
     
   /**

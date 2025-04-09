@@ -13,7 +13,7 @@ function App() {
   const dispatch=useAppDispatch();
   const i=localStorage.getItem('components');
   const a=localStorage.getItem('Board');
-  const[isLoading,setisL]=useState(false);
+  const[isLoading,setisL]=useState(true);
   useEffect(() => {
     const registerPeriodicSync = async () => {
         if ('serviceWorker' in navigator && 'PeriodicSyncManager' in window) {
@@ -32,7 +32,8 @@ function App() {
 
     registerPeriodicSync();
 }, []);
-  useEffect(()=>{
+
+ /*  useEffect(()=>{
 
     if(i ){
       
@@ -60,7 +61,7 @@ function App() {
 
     }
     
-  },[])
+  },[]) */
 
 if(isLoading){
   return (

@@ -56,8 +56,8 @@ function LinksComponent({component,handle}:ComponentWithHandle<Links>){
         setEditID(linkID);
         const item = component.links?.find(e => e.id === linkID);
         if (item) {
-        setTitle(item.title);
-        setSite(item.site);
+            setTitle(item.title);
+            setSite(item.site);
         }
     };
     const handleSetLink=(e:React.FormEvent<HTMLFormElement>)=>{
