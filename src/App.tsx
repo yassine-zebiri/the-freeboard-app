@@ -1,19 +1,19 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css'
 import HeaderComponent from './components/header';
 import TheWhiteBorad from './components/the-white-borad';
-import { useAppDispatch} from './store/hooks';
-import { getComponents } from './store/slices/ComponentsSlice';
-import { getBoard } from './store/slices/BoardSlice';
+//import { useAppDispatch} from './store/hooks';
+/* import { getComponents } from './store/slices/ComponentsSlice';
+import { getBoard } from './store/slices/BoardSlice'; */
 
 
 function App() {
 //  const state=useAppSelector(state=>state)
-  const dispatch=useAppDispatch();
+/*   const dispatch=useAppDispatch();
   const i=localStorage.getItem('components');
-  const a=localStorage.getItem('Board');
-  const[isLoading,setisL]=useState(true);
+  const a=localStorage.getItem('Board'); */
+ // const[isLoading,setisL]=useState(true);
   useEffect(() => {
     const registerPeriodicSync = async () => {
         if ('serviceWorker' in navigator && 'PeriodicSyncManager' in window) {
@@ -63,7 +63,7 @@ function App() {
     
   },[]) */
 
-if(isLoading){
+if(true){
   return (
     
     <>
